@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 6, 40, 56;
+  --background-end-rgb: 3, 31, 53;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 6, 40, 56;
+    --background-end-rgb: 3, 31, 53;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.container{
+  @apply flex flex-col items-center justify-center min-h-screen p-24 m-auto;
+
+  background-repeat: no-repeat; /* Agregamos la propiedad background-repeat para que la imagen no se repita */
+  background-attachment:fixed; /* Agregamos la propiedad background-attachment para fijar la imagen de fondo */
+  animation: fadeIn ease-in-out 0.5s; /* Agregamos una animación para que la imagen aparezca de manera gradual */
+}
+
+.bg-imagen {
+  background-image: url('../public/images/bgForm.png');
+  background-size: cover;
+  background-position: center;
+  box-sizing:border-box;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
