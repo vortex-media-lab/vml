@@ -6,8 +6,8 @@ export default function Home() {
       <div className='relative  flex place-items-center justify-center'>
         <Image
           className='relative'
-          src='/logo.png'
-          alt='Next.js Logo'
+          src='/images/logo.png'
+          alt='Vortex Media lab Logo'
           width={253}
           height={112}
           priority
